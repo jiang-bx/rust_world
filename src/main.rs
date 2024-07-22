@@ -1,5 +1,6 @@
 mod a_var;
 mod b_ownership;
+mod c_string;
 
 fn _greet_world() {
     let sou = "Grr Goot";
@@ -45,6 +46,4 @@ fn _test2() {
     }
 }
 
-fn main() {
-    a_var::_test()
-}
+fn main() {}

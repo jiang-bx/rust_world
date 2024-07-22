@@ -15,17 +15,12 @@ fn _b() {
     assert_eq!(x, y)
 }
 
-struct Struct {
-    e: i32,
-}
-
 #[test]
 fn c() {
-    let (a, b, c, d, e);
+    let (a, b, c, d);
     (a, b) = (1, 2);
     [c, .., d, _] = [1, 2, 3, 4, 5];
-    Struct { e, .. } = Struct { e: 5 };
-    assert_eq!([1, 2, 1, 4, 5], [a, b, c, d, e]);
+    assert_eq!([1, 2, 1, 4], [a, b, c, d]);
 }
 
 #[test]

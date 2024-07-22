@@ -64,6 +64,18 @@ fn f() {
 
     let x = 5;
     make_copy(x);
+
+    let mut s2 = String::from("world");
+    fn add(mut x: String) -> String {
+        x.push_str(" fdfds");
+        return x;
+    }
+
+    println!("{}", s2);
+
+    s2 = add(s2);
+
+    println!("{}", s2);
 }
 
 #[test]
@@ -79,4 +91,45 @@ fn g() {
     assert_eq!(5, *y);
 
     assert_eq!(5, z);
+}
+
+#[test]
+fn h() {
+    fn calc_len(s: &String) -> usize {
+        s.len()
+    }
+
+    let s = String::from("hello");
+
+    // 引用 s
+    let len = calc_len(&s);
+
+    println!("{} length {}", s, len)
+}
+
+#[test]
+fn k() {
+    fn make_some(x: &mut String) {
+        x.push_str(" ffff");
+    }
+
+    let mut s = String::from("hello");
+
+    println!("{}", s);
+
+    // 引用 s
+    make_some(&mut s);
+
+    println!("{}", s)
+}
+
+#[test]
+fn j() {
+    // 报错函数
+    // fn some() -> &String {
+    //     let s = String::from("sdfdsf");
+    //     &s
+    // }
+
+    // let a = some();
 }
