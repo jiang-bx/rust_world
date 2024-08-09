@@ -2,6 +2,8 @@ mod a_var;
 mod b_ownership;
 mod c_string;
 
+mod d_tuple;
+
 fn _greet_world() {
     let sou = "Grr Goot";
     let ch = "世界, 你好";
