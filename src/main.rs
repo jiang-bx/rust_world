@@ -4,6 +4,8 @@ mod c_string;
 
 mod d_tuple;
 
+mod e_control;
+
 fn _greet_world() {
     let sou = "Grr Goot";
     let ch = "世界, 你好";
